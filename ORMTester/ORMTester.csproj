@@ -2,18 +2,20 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E7406629-E127-4B96-8F29-287947075631}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{E2904991-25B1-4FA3-BFC7-AD2DAD991AFF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Stump.ORM</RootNamespace>
-    <AssemblyName>Stump.ORM</AssemblyName>
+    <RootNamespace>ORMTester</RootNamespace>
+    <AssemblyName>ORMTester</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,7 +24,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.6.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,28 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mapping\Attributes\FieldAttribute.cs" />
-    <Compile Include="Mapping\Attributes\OneColumnAttribute.cs" />
-    <Compile Include="Mapping\Attributes\PrimaryKey.cs" />
-    <Compile Include="Mapping\Attributes\PropertyAttribute.cs" />
-    <Compile Include="Mapping\Attributes\TableAttribute.cs" />
-    <Compile Include="Mapping\Column.cs" />
-    <Compile Include="Mapping\Table.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql\BoolLogicClause.cs" />
-    <Compile Include="Sql\ComparaisonClause.cs" />
-    <Compile Include="Sql\IWhereClause.cs" />
-    <Compile Include="Sql\Operator.cs" />
-    <Compile Include="Sql\SqlBaseBuilder.cs" />
-    <Compile Include="Sql\SqlSelectBuilder.cs" />
-    <Compile Include="Sql\SqlString.cs" />
-    <Compile Include="Sql\SqlUpdateBuilder.cs" />
-    <Compile Include="Sql\WhereStatement.cs" />
-    <Compile Include="Types\IValue.cs" />
-    <Compile Include="Types\Primitives\Int32Type.cs" />
-    <Compile Include="Types\PrimitiveType.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Stump.ORM.csproj">
+      <Project>{E7406629-E127-4B96-8F29-287947075631}</Project>
+      <Name>Stump.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

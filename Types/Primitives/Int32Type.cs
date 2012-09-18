@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Stump.ORM.Sql;
 
 namespace Stump.ORM.Types.Primitives
 {
@@ -19,6 +20,15 @@ namespace Stump.ORM.Types.Primitives
             {
                 return typeof(int);
             }
+        }
+
+        public override object Get(IDataReader reader)
+        {
+            return reader.GetInt32(reader.GetOrdinal(Column.Name));
+        }
+
+        public override void Set(IDataParameter parameter)
+        {
         }
     }
 }

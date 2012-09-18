@@ -45,9 +45,9 @@ namespace Stump.ORM.Sql
             Left = str;
         }
 
-        public void SetRight(string str)
+        public void SetRight(string str, bool quote = true)
         {
-            if (!(str.StartsWith("'") && str.EndsWith("'")) &&
+            if (quote && !(str.StartsWith("'") && str.EndsWith("'")) &&
                 !(str.StartsWith("\"") && str.EndsWith("\"")))
                 str = "'" + str + "'";
 

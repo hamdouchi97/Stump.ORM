@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using Stump.ORM.Mapping;
 
 namespace Stump.ORM.Sql
 {
@@ -20,7 +21,15 @@ namespace Stump.ORM.Sql
 
         public void AddSourceTable(string source)
         {
+            if (m_sources.Contains(source))
+                return;
+
             m_sources.Add(source);
+        }
+
+        public void AddSourceTable(Table source)
+        {
+            AddSourceTable(source.Name);
         }
 
         public void AddWhereClause(IWhereClause clause)
