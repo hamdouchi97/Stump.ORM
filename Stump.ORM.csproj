@@ -41,10 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Entity.cs" />
     <Compile Include="Mapping\Attributes\FieldAttribute.cs" />
-    <Compile Include="Mapping\Attributes\OneColumnAttribute.cs" />
-    <Compile Include="Mapping\Attributes\PrimaryKey.cs" />
-    <Compile Include="Mapping\Attributes\PropertyAttribute.cs" />
     <Compile Include="Mapping\Attributes\TableAttribute.cs" />
     <Compile Include="Mapping\Column.cs" />
     <Compile Include="Mapping\Table.cs" />
@@ -54,6 +52,8 @@
     <Compile Include="Sql\IWhereClause.cs" />
     <Compile Include="Sql\Operator.cs" />
     <Compile Include="Sql\SqlBaseBuilder.cs" />
+    <Compile Include="Sql\SqlCreateTableBuilder.cs" />
+    <Compile Include="Sql\SqlInsertBuilder.cs" />
     <Compile Include="Sql\SqlSelectBuilder.cs" />
     <Compile Include="Sql\SqlString.cs" />
     <Compile Include="Sql\SqlUpdateBuilder.cs" />

@@ -19,6 +19,11 @@ namespace Stump.ORM.Sql
             m_results.Add(name);
         }
 
+        public void AddSelectResult(Column column)
+        {
+            AddSelectResult(string.Format("{0}.{1}", QuoteName(column.Table.Name), QuoteName(column.Name)));
+        }
+
         public void AddSourceTable(string source)
         {
             if (m_sources.Contains(source))
@@ -29,7 +34,7 @@ namespace Stump.ORM.Sql
 
         public void AddSourceTable(Table source)
         {
-            AddSourceTable(source.Name);
+            AddSourceTable(QuoteName(source.Name));
         }
 
         public void AddWhereClause(IWhereClause clause)
@@ -41,11 +46,6 @@ namespace Stump.ORM.Sql
         }
 
         public override string ToString()
-        {
-            return ToSqlString().ActualString;
-        }
-
-        public override SqlString ToSqlString()
         {
             var builder = new StringBuilder();
 
@@ -62,7 +62,7 @@ namespace Stump.ORM.Sql
 
             builder.Append(";");
 
-            return new SqlString(builder.ToString());
+            return builder.ToString();
         }
     }
 }

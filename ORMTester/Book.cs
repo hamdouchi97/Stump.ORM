@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using Stump.ORM.Mapping.Attributes;
 
 namespace ORMTester
@@ -6,28 +7,28 @@ namespace ORMTester
     [Table("books")]
     public class Book
     {
-        [PrimaryKey]
+        [Field("Id", DbType.Int32, true)]
         public int Id
         {
             get;
             set;
         }
 
-        [Property]
+        [Field("Name", DbType.AnsiString)]
         public string Name
         {
             get;
             set;
         }
 
-        [Property]
+        [Field("Author", DbType.AnsiString)]
         public string Author
         {
             get;
             set;
         }
 
-        [Property]
+        [Field("PublicationDate", DbType.DateTime)]
         public DateTime PublicationDate
         {
             get;
