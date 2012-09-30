@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Stump.ORM.Sql;
+using MySql.Data.MySqlClient;
+using Stump.ORM;
+using SubSonic.DataProviders;
+using SubSonic.Extensions;
 
 namespace ORMTester
 {
@@ -10,14 +10,19 @@ namespace ORMTester
     {
         static void Main(string[] args)
         {
-            var builder = new SqlSelectBuilder();
-            builder.AddSourceTable("accounts");
-            builder.AddSelectResult("*");
-            builder.AddWhereClause(new ComparaisonClause("Id", Operator.EQ, 10));
-            builder.AddWhereClause(new BoolLogicClause(BoolLogicClauseType.AND));
-            builder.AddWhereClause(new ComparaisonClause("AdminRights", Operator.GREATER, 3));
+            var db = new MySqlConnection("database=test;uid=root;password=;");
+            db.Open();
+            var provider = ProviderFactory.GetProvider(db.ConnectionString, "MySql.Data.MySqlClient");
+            var query = typeof(Book).ToSchemaTable(provider).CreateSql;
+            db.Execute(query);
+            db.Insert<Book>(new Book()
+            {
+                Author = "me",
+                Name = "mine",
+                PublicationDate = DateTime.Now
+            });
 
-            Console.WriteLine(builder.ToString());
+            var book = db.Get<Book>(1);
 
             Console.Read();
         }
