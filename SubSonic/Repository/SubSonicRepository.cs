@@ -11,16 +11,17 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
-using SubSonic.Query;
-using SubSonic.Schema;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Repository
+namespace Stump.ORM.SubSonic.Repository
 {
     /// <summary>
     /// A Repository class which wraps the a Database by type

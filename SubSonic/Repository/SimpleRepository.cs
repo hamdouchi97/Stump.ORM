@@ -11,18 +11,19 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 //  
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
-using SubSonic.Query;
-using SubSonic.Schema;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Repository
+namespace Stump.ORM.SubSonic.Repository
 {
     public class SimpleRepository : IRepository
     {

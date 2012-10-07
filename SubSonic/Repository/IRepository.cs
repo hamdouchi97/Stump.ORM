@@ -11,14 +11,15 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using SubSonic.Schema;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Repository
+namespace Stump.ORM.SubSonic.Repository
 {
     public interface IRepository<T>
     {

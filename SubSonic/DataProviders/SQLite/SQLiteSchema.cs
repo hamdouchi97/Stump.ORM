@@ -11,14 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Data;
 using System.Text;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration.Schema;
+using Stump.ORM.SubSonic.SQLGeneration.Schema;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders.SQLite
+namespace Stump.ORM.SubSonic.DataProviders.SQLite
 {
 
     public class SQLiteSchema : ANSISchemaGenerator

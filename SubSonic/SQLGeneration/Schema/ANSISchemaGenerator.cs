@@ -11,16 +11,17 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Text;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
-using SubSonic.Schema;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.SqlGeneration.Schema
+namespace Stump.ORM.SubSonic.SQLGeneration.Schema
 {
     /// <summary>
     /// A schema generator for your DB
@@ -53,7 +54,7 @@ namespace SubSonic.SqlGeneration.Schema
         /// <summary>
         /// Builds a DROP TABLE statement.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
         /// <returns></returns>
         public virtual string BuildDropTableStatement(string tableName)
         {
@@ -63,7 +64,7 @@ namespace SubSonic.SqlGeneration.Schema
         /// <summary>
         /// Adds the column.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
         /// <param name="column">The column.</param>
         /// <returns></returns>
         public virtual string BuildAddColumnStatement(string tableName, IColumn column)
@@ -113,8 +114,8 @@ namespace SubSonic.SqlGeneration.Schema
         /// <summary>
         /// Removes the column.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public virtual string BuildDropColumnStatement(string tableName, string columnName)
         {

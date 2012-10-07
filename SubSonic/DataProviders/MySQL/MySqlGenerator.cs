@@ -11,17 +11,16 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Data;
 using System.Text;
-using SubSonic.Extensions;
-using SubSonic.Query;
-using SubSonic.Schema;
-using SubSonic.DataProviders;
-using SubSonic.SqlGeneration;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.SQLGeneration;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders.MySQL
+namespace Stump.ORM.SubSonic.DataProviders.MySQL
 {
     /// <summary>
     /// 

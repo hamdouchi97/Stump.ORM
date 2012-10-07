@@ -11,16 +11,16 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using SubSonic.DataProviders;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Linq.Structure;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// A holder for 1 or more queries to be executed together

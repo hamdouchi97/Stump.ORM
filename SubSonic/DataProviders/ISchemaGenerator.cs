@@ -11,12 +11,11 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.Data;
-using SubSonic.DataProviders;
-using SubSonic.Schema;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     public interface ISchemaGenerator
     {
@@ -30,14 +29,14 @@ namespace SubSonic.DataProviders
         /// <summary>
         /// Builds a DROP TABLE statement.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
         /// <returns></returns>
         string BuildDropTableStatement(string tableName);
 
         /// <summary>
         /// Adds the column.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
         /// <param name="column">The column.</param>
         string BuildAddColumnStatement(string tableName, IColumn column);
 
@@ -50,8 +49,8 @@ namespace SubSonic.DataProviders
         /// <summary>
         /// Removes the column.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         string BuildDropColumnStatement(string tableName, string columnName);
 

@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace SubSonic.DataProviders.Log
+namespace Stump.ORM.SubSonic.DataProviders.Log
 {
     public class TextWriterLogAdapter : ILogAdapter
     {

@@ -3,14 +3,12 @@
 //Original code created by Matt Warren: http://iqtoolkit.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=19725
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Reflection;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// Creates a reusable, parameterized representation of a query that caches the execution plan

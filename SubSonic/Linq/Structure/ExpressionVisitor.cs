@@ -7,9 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq.Expressions;
-using System.Reflection;
 
-namespace SubSonic.Linq.Structure 
+namespace Stump.ORM.SubSonic.Linq.Structure 
 {
     public abstract class ExpressionVisitor
     {

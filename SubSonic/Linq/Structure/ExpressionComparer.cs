@@ -3,15 +3,11 @@
 //Original code created by Matt Warren: http://iqtoolkit.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=19725
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// Compare two expressions to determine if they are equivalent

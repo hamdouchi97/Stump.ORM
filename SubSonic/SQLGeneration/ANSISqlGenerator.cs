@@ -11,19 +11,20 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using SubSonic.Extensions;
-using SubSonic.Query;
-using SubSonic.Schema;
-using Constraint = SubSonic.Query.Constraint;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
+using Constraint = Stump.ORM.SubSonic.Query.Constraint;
 
-namespace SubSonic.SqlGeneration
+namespace Stump.ORM.SubSonic.SQLGeneration
 {
 
 
@@ -102,7 +103,7 @@ namespace SubSonic.SqlGeneration
 		/// <summary>
 		/// Finds the column.
 		/// </summary>
-		/// <param name="columnName">Name of the column.</param>
+		/// <param name="columnName">ColumnName of the column.</param>
 		/// <returns></returns>
 		public IColumn FindColumn(string columnName)
 		{

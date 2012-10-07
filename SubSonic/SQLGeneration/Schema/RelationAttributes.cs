@@ -11,14 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Linq;
-using System.Data;
-using SubSonic.Schema;
 using System.Reflection;
 using System.Collections.Generic;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.SqlGeneration.Schema
+namespace Stump.ORM.SubSonic.SQLGeneration.Schema
 {
     public interface IRelationMappingAttribute
     {

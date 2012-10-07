@@ -11,9 +11,10 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
-using SubSonic.DataProviders;
 
-namespace SubSonic.Schema
+using Stump.ORM.SubSonic.DataProviders;
+
+namespace Stump.ORM.SubSonic.Schema
 {
     public interface IDBObject
     {

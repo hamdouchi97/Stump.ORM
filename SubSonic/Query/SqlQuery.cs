@@ -11,6 +11,7 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,12 +20,11 @@ using System.Data;
 using System.Linq.Expressions;
 using System.Text;
 using System.Transactions;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// 
@@ -112,7 +112,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Finds the column.
         /// </summary>
-        /// <param name="Name">Name of the column.</param>
+        /// <param name="Name">ColumnName of the column.</param>
         /// <returns></returns>
         public IColumn FindColumn(string Name)
         {
@@ -178,7 +178,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Wheres the specified column name.
         /// </summary>
-        /// <param name="Name">Name of the column.</param>
+        /// <param name="Name">ColumnName of the column.</param>
         /// <returns></returns>
         public Constraint Where(string Name)
         {
@@ -221,7 +221,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Ors the specified column name.
         /// </summary>
-        /// <param name="Name">Name of the column.</param>
+        /// <param name="Name">ColumnName of the column.</param>
         /// <returns></returns>
         public Constraint Or(string Name)
         {
@@ -259,7 +259,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Ors the expression.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public Constraint OrExpression(string columnName)
         {
@@ -314,7 +314,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Ands the specified column name.
         /// </summary>
-        /// <param name="Name">Name of the column.</param>
+        /// <param name="Name">ColumnName of the column.</param>
         /// <returns></returns>
         public Constraint And(string Name)
         {
@@ -352,7 +352,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Ands the expression.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public Constraint AndExpression(string columnName)
         {
@@ -537,7 +537,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Froms the specified TBL.
         /// </summary>
-        /// <param name="tableName">Name of the table.</param>
+        /// <param name="tableName">ColumnName of the table.</param>
         /// <returns></returns>
         public SqlQuery From(string tableName)
         {
@@ -1179,7 +1179,7 @@ namespace SubSonic.Query
         /// Executes the transaction.
         /// </summary>
         /// <param name="queries">The queries.</param>
-        /// <param name="connectionStringName">Name of the connection string.</param>
+        /// <param name="connectionStringName">ColumnName of the connection string.</param>
         public static void ExecuteTransaction(List<SqlQuery> queries, string connectionStringName)
         {
 

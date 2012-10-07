@@ -11,12 +11,13 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using SubSonic.Query;
+using Stump.ORM.SubSonic.Query;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     public static class Linq
     {

@@ -11,10 +11,11 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
-using SubSonic.DataProviders;
-using SubSonic.Schema;
 
-namespace SubSonic.Query
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Schema;
+
+namespace Stump.ORM.SubSonic.Query
 {
     public class Destroy<T> : Delete<T> where T : new() {}
 
@@ -39,7 +40,7 @@ namespace SubSonic.Query
             QueryCommandType = QueryType.Delete;
             _provider = provider;
             ITable tbl = table;
-            //string tableName = table.Name;
+            //string tableName = table.ColumnName;
             FromTables.Add(tbl);
         }
 

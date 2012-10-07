@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SubSonic.DataProviders;
-using SubSonic.SqlGeneration;
+﻿using Stump.ORM.SubSonic.SQLGeneration;
 
-
-namespace SubSonic.DataProviders.MySQL
+namespace Stump.ORM.SubSonic.DataProviders.MySQL
 {
     class MySqlSqlFragment : SqlFragment
     {

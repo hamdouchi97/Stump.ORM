@@ -4,17 +4,14 @@
 
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using SubSonic.Schema;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// A simple query mapping that attempts to infer mapping from naming conventionss

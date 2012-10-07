@@ -11,11 +11,12 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Data;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
 
-namespace SubSonic.Schema
+namespace Stump.ORM.SubSonic.Schema
 {
     public class DatabaseColumn : IColumn
     {

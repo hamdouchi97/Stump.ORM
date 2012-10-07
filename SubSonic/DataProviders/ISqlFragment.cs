@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-
-namespace SubSonic.DataProviders
+﻿namespace Stump.ORM.SubSonic.DataProviders
 {
     
     public interface ISqlFragment

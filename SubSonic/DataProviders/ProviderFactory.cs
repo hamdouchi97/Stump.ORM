@@ -11,14 +11,15 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using SubSonic.DataProviders.SqlServer;
-using SubSonic.DataProviders.MySQL;
-using SubSonic.DataProviders.SQLite;
+using Stump.ORM.SubSonic.DataProviders.MySQL;
+using Stump.ORM.SubSonic.DataProviders.SQLite;
+using Stump.ORM.SubSonic.DataProviders.SqlServer;
 
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     public static class ProviderFactory
     {

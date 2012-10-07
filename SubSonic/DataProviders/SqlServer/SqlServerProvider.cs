@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SubSonic.Schema;
-using System.Data.Common;
+using Stump.ORM.SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-using SubSonic.Linq.Structure;
-using SubSonic.Query;
-
-namespace SubSonic.DataProviders.SqlServer
+namespace Stump.ORM.SubSonic.DataProviders.SqlServer
 {
     public class SqlServerProvider : DbDataProvider, IDataProvider
     {

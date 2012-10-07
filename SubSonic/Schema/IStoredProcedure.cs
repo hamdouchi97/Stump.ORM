@@ -11,7 +11,7 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
-namespace SubSonic.Schema
+namespace Stump.ORM.SubSonic.Schema
 {
     public interface IStoredProcedure : IDBObject
     {

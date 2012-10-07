@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using SubSonic.Repository;
-using SubSonic.Schema;
-using SubSonic.Extensions;
 using System.Linq.Expressions;
 using System.Reflection;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Repository
+namespace Stump.ORM.SubSonic.Repository
 {
     public class SimpleTestRepository : IRepository
     {

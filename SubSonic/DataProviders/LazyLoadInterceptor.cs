@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SubSonic.Query;
 using System.Collections;
 using Castle.DynamicProxy;
-using SubSonic.Schema;
 using System.Reflection;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     public class LazyLoadInterceptor : IInterceptor
     {

@@ -8,12 +8,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using System.IO;
-using SubSonic.DataProviders;
-using SubSonic.Extensions;
-using SubSonic.Linq.Translation;
-using SubSonic.Query;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Linq.Translation;
+using Stump.ORM.SubSonic.Query;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// A LINQ IQueryable query provider that executes database queries over a DbConnection

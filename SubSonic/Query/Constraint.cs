@@ -11,13 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections;
 using System.Data;
-using SubSonic.Extensions;
 using System.ComponentModel;
+using Stump.ORM.SubSonic.Extensions;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// Where, And, Or
@@ -102,7 +103,7 @@ namespace SubSonic.Query
         /// Initializes a new instance of the <see cref="Constraint"/> class.
         /// </summary>
         /// <param name="condition">The condition.</param>
-        /// <param name="constraintColumnName">Name of the constraint column.</param>
+        /// <param name="constraintColumnName">ColumnName of the constraint column.</param>
         public Constraint(ConstraintType condition, string constraintColumnName)
         {
             Condition = condition;
@@ -115,8 +116,8 @@ namespace SubSonic.Query
         /// Initializes a new instance of the <see cref="Constraint"/> class.
         /// </summary>
         /// <param name="condition">The condition.</param>
-        /// <param name="constraintColumnName">Name of the constraint column.</param>
-        /// <param name="constraintQualifiedColumnName">Name of the constraint qualified column.</param>
+        /// <param name="constraintColumnName">ColumnName of the constraint column.</param>
+        /// <param name="constraintQualifiedColumnName">ColumnName of the constraint qualified column.</param>
         public Constraint(ConstraintType condition, string constraintColumnName, string constraintQualifiedColumnName)
         {
             Condition = condition;
@@ -129,8 +130,8 @@ namespace SubSonic.Query
         /// Initializes a new instance of the <see cref="Constraint"/> class.
         /// </summary>
         /// <param name="condition">The condition.</param>
-        /// <param name="constraintColumnName">Name of the constraint column.</param>
-        /// <param name="constraintQualifiedColumnName">Name of the constraint qualified column.</param>
+        /// <param name="constraintColumnName">ColumnName of the constraint column.</param>
+        /// <param name="constraintQualifiedColumnName">ColumnName of the constraint qualified column.</param>
         /// <param name="constraintConstructionFragment">The constraint construction fragment.</param>
         public Constraint(ConstraintType condition, string constraintColumnName, string constraintQualifiedColumnName, string constraintConstructionFragment)
         {
@@ -144,7 +145,7 @@ namespace SubSonic.Query
         /// Initializes a new instance of the <see cref="Constraint"/> class.
         /// </summary>
         /// <param name="condition">The condition.</param>
-        /// <param name="constraintColumnName">Name of the constraint column.</param>
+        /// <param name="constraintColumnName">ColumnName of the constraint column.</param>
         /// <param name="sqlQuery">The SQL query.</param>
         public Constraint(ConstraintType condition, string constraintColumnName, SqlQuery sqlQuery)
         {
@@ -159,8 +160,8 @@ namespace SubSonic.Query
         /// Initializes a new instance of the <see cref="Constraint"/> class.
         /// </summary>
         /// <param name="condition">The condition.</param>
-        /// <param name="constraintColumnName">Name of the constraint column.</param>
-        /// <param name="constraintQualifiedColumnName">Name of the constraint qualified column.</param>
+        /// <param name="constraintColumnName">ColumnName of the constraint column.</param>
+        /// <param name="constraintQualifiedColumnName">ColumnName of the constraint qualified column.</param>
         /// <param name="constraintConstructionFragment">The constraint construction fragment.</param>
         /// <param name="sqlQuery">The SQL query.</param>
         public Constraint(ConstraintType condition, string constraintColumnName, string constraintQualifiedColumnName, string constraintConstructionFragment, SqlQuery sqlQuery)
@@ -175,7 +176,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Wheres the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Constraint Where(string columnName)
         {
@@ -185,7 +186,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Ands the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Constraint And(string columnName)
         {
@@ -195,7 +196,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Ors the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Constraint Or(string columnName)
         {

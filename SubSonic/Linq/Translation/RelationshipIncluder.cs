@@ -4,16 +4,13 @@
 
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Linq.Structure;
 
-namespace SubSonic.Linq.Translation
+namespace Stump.ORM.SubSonic.Linq.Translation
 {
     /// <summary>
     /// Adds relationship to query results depending on policy

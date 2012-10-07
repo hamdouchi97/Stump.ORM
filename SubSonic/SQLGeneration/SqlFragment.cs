@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Stump.ORM.SubSonic.DataProviders;
 
-using SubSonic.DataProviders;
-
-namespace SubSonic.SqlGeneration
+namespace Stump.ORM.SubSonic.SQLGeneration
 {
     /// <summary>
     /// Summary for the SqlFragment class

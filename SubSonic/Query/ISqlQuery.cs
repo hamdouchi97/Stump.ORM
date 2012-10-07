@@ -11,9 +11,10 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.Data;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     public interface ISqlQuery
     {

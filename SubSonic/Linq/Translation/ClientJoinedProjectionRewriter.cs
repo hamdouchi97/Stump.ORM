@@ -3,18 +3,13 @@
 //Original code created by Matt Warren: http://iqtoolkit.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=19725
 
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
-using SubSonic.Linq.Structure;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Linq.Structure;
 
-namespace SubSonic.Linq.Translation
+namespace Stump.ORM.SubSonic.Linq.Translation
 {
     /// <summary>
     /// rewrites nested projections into client-side joins

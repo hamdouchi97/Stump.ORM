@@ -11,13 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
-using SubSonic.Query;
+using Stump.ORM.SubSonic.Query;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     public class ExpressionParser
     {
@@ -157,7 +158,7 @@ namespace SubSonic.Extensions
                             //this is screwed
                             MemberExpression val = right.Expression as MemberExpression;
                             //object expressionValue = EvaluateExpression(val.Expression);
-                            //expressionValue.GetType().InvokeMember(val.Member.Name, global, global, expressionValue) ;
+                            //expressionValue.GetType().InvokeMember(val.Member.ColumnName, global, global, expressionValue) ;
 
                             var t = right.Member.MemberType;
 

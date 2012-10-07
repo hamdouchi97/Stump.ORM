@@ -11,12 +11,13 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     /// <summary>
     /// Summary for the Numbers class

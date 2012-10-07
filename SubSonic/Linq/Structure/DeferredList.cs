@@ -6,7 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// Common interface for controlling defer-loadable types

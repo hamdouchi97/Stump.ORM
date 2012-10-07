@@ -11,11 +11,12 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
 
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     // Big thanks to Brenton Webster for the code contained herein...
 
@@ -50,7 +51,7 @@ namespace SubSonic.DataProviders
         /// Indicates to the default DataProvider that it should use a per-thread shared connection using the given connection string.
         /// </summary>
         /// <param name="connectionString">The connection string.</param>
-        /// <param name="providerName">Name of the provider.</param>
+        /// <param name="providerName">ColumnName of the provider.</param>
         public SharedDbConnectionScope(string connectionString, string providerName)
             : this(ProviderFactory.GetProvider(connectionString, providerName))
         {

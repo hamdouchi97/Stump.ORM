@@ -11,11 +11,12 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Data;
-using SubSonic.Schema;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.SqlGeneration.Schema
+namespace Stump.ORM.SubSonic.SQLGeneration.Schema
 {
     public interface IClassMappingAttribute
     {
@@ -30,11 +31,11 @@ namespace SubSonic.SqlGeneration.Schema
     }
 
 	[AttributeUsage(AttributeTargets.Class)]
-    public class SubSonicTableNameOverrideAttribute : Attribute, IClassMappingAttribute
+    public class TableNameAttribute : Attribute, IClassMappingAttribute
 	{
         public string TableName { get; set; }
 
-        public SubSonicTableNameOverrideAttribute(string tableName)
+        public TableNameAttribute(string tableName)
         {
 			TableName = tableName;
         }
@@ -51,11 +52,11 @@ namespace SubSonic.SqlGeneration.Schema
     }
 
 	[AttributeUsage(AttributeTargets.Property)]
-	public class SubSonicColumnNameOverrideAttribute : Attribute, IPropertyMappingAttribute
+	public class ColumnAttribute : Attribute, IPropertyMappingAttribute
 	{
 		public string ColumnName { get; set; }
 
-		public SubSonicColumnNameOverrideAttribute(string tableName)
+		public ColumnAttribute(string tableName)
 		{
 			ColumnName = tableName;
 		}
@@ -100,18 +101,29 @@ namespace SubSonic.SqlGeneration.Schema
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicIgnoreAttribute : Attribute { }
+    public class IgnoreAttribute : Attribute { }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicPrimaryKeyAttribute : Attribute, IPropertyMappingAttribute
+    public class PrimaryKeyAttribute : Attribute, IPropertyMappingAttribute
     {
         public bool AutoIncrement { get; set; }
 
-        public SubSonicPrimaryKeyAttribute() : this(true) {}
-
-        public SubSonicPrimaryKeyAttribute(bool autoIncrement)
+        public PrimaryKeyAttribute(string primaryKey, bool autoIncrement = true)
         {
             AutoIncrement = autoIncrement;
+            Name = primaryKey;
+        }
+
+        public string Name
+        {
+            get;
+            private set;
+        }
+
+        public string SequenceName
+        {
+            get;
+            set;
         }
 
         public bool Accept(IColumn column)

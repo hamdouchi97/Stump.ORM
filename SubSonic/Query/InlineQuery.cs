@@ -11,15 +11,16 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Text.RegularExpressions;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
 	/// <summary>
 	/// For Jeff Atwood
@@ -189,7 +190,7 @@ namespace SubSonic.Query
 
 			for (int i = 0; i < paramList.Count; i++)
 			{
-				var dbType = Database.GetDbType(values[i].GetType());
+				var dbType = Extensions.Database.GetDbType(values[i].GetType());
 				cmd.Parameters.Add(paramList[i], values[i], dbType);
 			}
 		}

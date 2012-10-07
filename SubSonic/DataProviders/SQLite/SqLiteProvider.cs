@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SubSonic.Schema;
-using System.Data.Common;
-using SubSonic.Linq.Structure;
-using SubSonic.Query;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders.SQLite
+namespace Stump.ORM.SubSonic.DataProviders.SQLite
 {
 
     public class SQLiteProvider : DbDataProvider, IDataProvider

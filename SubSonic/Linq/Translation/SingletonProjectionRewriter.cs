@@ -4,10 +4,10 @@
 
 
 using System.Linq.Expressions;
-using SubSonic.Linq.Structure;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Linq.Structure;
 
-namespace SubSonic.Linq.Translation
+namespace Stump.ORM.SubSonic.Linq.Translation
 {
     /// <summary>
     /// Rewrites nested singleton projection into server-side joins

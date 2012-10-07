@@ -11,6 +11,7 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,17 +19,14 @@ using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using SubSonic.DataProviders.Log;
-using SubSonic.Extensions;
-using SubSonic.Query;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration.Schema;
-using SubSonic.DataProviders;
-using SubSonic.SqlGeneration;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.DataProviders.Log;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.SQLGeneration;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     public abstract class DbDataProvider : IDataProvider
     {
@@ -338,7 +336,7 @@ namespace SubSonic.DataProviders
             //        "the template you're using. Make sure to use it, and not the query directly");
             //}
 
-            //var result = Schema.Tables.FirstOrDefault(x => x.Name.ToLower() == tableName.ToLower());
+            //var result = Schema.Tables.FirstOrDefault(x => x.ColumnName.ToLower() == tableName.ToLower());
             var result = Schema.Tables.FirstOrDefault(x => x.Name.Equals(tableName, StringComparison.InvariantCultureIgnoreCase)) ??
                          Schema.Tables.FirstOrDefault(x => x.ClassName.Equals(tableName, StringComparison.InvariantCultureIgnoreCase));
 
@@ -478,7 +476,7 @@ namespace SubSonic.DataProviders
                 
                 //need to assign a DbType
                 var valueType = paramValues[i].GetType();
-                var dbType = Database.GetDbType(valueType);
+                var dbType = Extensions.Database.GetDbType(valueType);
                 
                 
                 cmd.AddParameter(query.ParameterNames[i], paramValues[i],dbType);

@@ -1,6 +1,6 @@
 using System;
 
-namespace SubSonic.DataProviders.Log
+namespace Stump.ORM.SubSonic.DataProviders.Log
 {
     public class DelegatingLogAdapter : ILogAdapter
     {

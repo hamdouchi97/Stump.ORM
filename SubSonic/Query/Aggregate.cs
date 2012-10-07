@@ -11,10 +11,11 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
-using System;
-using SubSonic.Schema;
 
-namespace SubSonic.Query
+using System;
+using Stump.ORM.SubSonic.Schema;
+
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// Enum for General SQL Functions
@@ -64,7 +65,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Counts the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate Count(string columnName)
         {
@@ -75,7 +76,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Counts the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate Count(string columnName, string alias)
@@ -98,7 +99,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Sums the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate Sum(string columnName)
         {
@@ -121,7 +122,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Sums the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate Sum(string columnName, string alias)
@@ -144,7 +145,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Groups the by.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate GroupBy(string columnName)
         {
@@ -167,7 +168,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Groups the by.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate GroupBy(string columnName, string alias)
@@ -190,7 +191,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Avgs the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate Avg(string columnName)
         {
@@ -213,7 +214,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Avgs the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate Avg(string columnName, string alias)
@@ -236,7 +237,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Maxes the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate Max(string columnName)
         {
@@ -259,7 +260,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Maxes the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate Max(string columnName, string alias)
@@ -282,7 +283,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Mins the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate Min(string columnName)
         {
@@ -305,7 +306,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Mins the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate Min(string columnName, string alias)
@@ -328,7 +329,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Variances the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate Variance(string columnName)
         {
@@ -351,7 +352,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Variances the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate Variance(string columnName, string alias)
@@ -374,7 +375,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Standards the deviation.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public static Aggregate StandardDeviation(string columnName)
         {
@@ -397,7 +398,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Standards the deviation.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <returns></returns>
         public static Aggregate StandardDeviation(string columnName, string alias)
@@ -416,7 +417,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Initializes a new instance of the <see cref="Aggregate"/> class.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="aggregateType">Type of the aggregate.</param>
         public Aggregate(string columnName, AggregateFunction aggregateType)
         {
@@ -428,7 +429,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Initializes a new instance of the <see cref="Aggregate"/> class.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <param name="alias">The alias.</param>
         /// <param name="aggregateType">Type of the aggregate.</param>
         public Aggregate(string columnName, string alias, AggregateFunction aggregateType)

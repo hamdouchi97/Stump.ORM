@@ -11,14 +11,15 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
 
-namespace SubSonic.Schema
+namespace Stump.ORM.SubSonic.Schema
 {
     public class Migrator
     {

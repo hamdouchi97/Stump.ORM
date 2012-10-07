@@ -1,7 +1,7 @@
-using SubSonic.DataProviders;
 using System.Linq.Expressions;
 using System;
-namespace SubSonic.Linq.Structure
+
+namespace Stump.ORM.SubSonic.DataProviders
 {
     /// <summary>
     /// Defines the language rules for the query provider

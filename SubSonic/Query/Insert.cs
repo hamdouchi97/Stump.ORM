@@ -11,18 +11,17 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq.Expressions;
 using System.Text;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
-using SubSonic.Query;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     public class InsertSetting
     {

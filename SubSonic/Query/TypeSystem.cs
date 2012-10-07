@@ -11,11 +11,12 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// Type related helper methods

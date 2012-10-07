@@ -1,4 +1,4 @@
-﻿namespace SubSonic.Repository
+﻿namespace Stump.ORM.SubSonic.Repository
 {
 	internal static class SimpleRepositoryOptionsExtensions
 	{

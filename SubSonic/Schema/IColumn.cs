@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace SubSonic.Schema
+namespace Stump.ORM.SubSonic.Schema
 {
     public interface IColumn : IDBObject
     {

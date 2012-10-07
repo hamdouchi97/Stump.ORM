@@ -11,11 +11,11 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.IO;
 using System.Net;
 
-
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     /// <summary>
     /// Summary for the Files class

@@ -1,10 +1,8 @@
 ﻿using System.Linq.Expressions;
-using SubSonic.DataProviders;
-using SubSonic.Linq.Structure;
-using SubSonic.Linq.Translation;
+using Stump.ORM.SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Linq.Translation;
 
-
-namespace SubSonic.DataProviders.MySQL
+namespace Stump.ORM.SubSonic.DataProviders.MySQL
 {
     /// <summary>
     /// MySQL specific QueryLanguage

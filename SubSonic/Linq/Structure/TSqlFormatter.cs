@@ -4,15 +4,12 @@
 
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using SubSonic.DataProviders;
 using System.Globalization;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// Formats a query expression into TSQL language syntax

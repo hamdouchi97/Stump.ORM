@@ -3,14 +3,11 @@
 //Original code created by Matt Warren: http://iqtoolkit.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=19725
 
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Linq.Structure;
 
-namespace SubSonic.Linq.Translation
+namespace Stump.ORM.SubSonic.Linq.Translation
 {
     /// <summary>
     ///  returns the set of all aliases produced by a query source

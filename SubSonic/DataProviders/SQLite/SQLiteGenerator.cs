@@ -11,14 +11,13 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Text;
-using SubSonic.Query;
-using SubSonic.DataProviders;
-using SubSonic.SqlGeneration;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.SQLGeneration;
 
-
-namespace SubSonic.DataProviders.SQLite
+namespace Stump.ORM.SubSonic.DataProviders.SQLite
 {
     
     public class SQLiteGenerator : ANSISqlGenerator

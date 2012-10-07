@@ -11,18 +11,18 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq.Expressions;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration;
 using System.Linq;
 using System.ComponentModel;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// 
@@ -150,7 +150,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Sets the specified column name.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         public Setting Set(string columnName)
         {

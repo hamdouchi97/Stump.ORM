@@ -1,9 +1,8 @@
 ﻿using System.Linq.Expressions;
-using SubSonic.DataProviders;
-using SubSonic.Linq.Structure;
-using SubSonic.Linq.Translation;
+using Stump.ORM.SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Linq.Translation;
 
-namespace SubSonic.DataProviders.SQLite
+namespace Stump.ORM.SubSonic.DataProviders.SQLite
 {
     /// <summary>
     /// SQLite specific QueryLanguage

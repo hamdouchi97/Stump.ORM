@@ -11,13 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     public static class Strings
     {
@@ -695,9 +696,9 @@ namespace SubSonic.Extensions
         }
 
         /// <summary>
-        /// Converts US State Name to it's two-character abbreviation. Returns null if the state name was not found.
+        /// Converts US State ColumnName to it's two-character abbreviation. Returns null if the state name was not found.
         /// </summary>
-        /// <param name="stateName">US State Name (ie Texas)</param>
+        /// <param name="stateName">US State ColumnName (ie Texas)</param>
         /// <returns></returns>
         public static string USStateNameToAbbrev(string stateName)
         {
@@ -711,9 +712,9 @@ namespace SubSonic.Extensions
         }
 
         /// <summary>
-        /// Converts a two-character US State Abbreviation to it's official Name Returns null if the abbreviation was not found.
+        /// Converts a two-character US State Abbreviation to it's official ColumnName Returns null if the abbreviation was not found.
         /// </summary>
-        /// <param name="stateAbbrev">US State Name (ie Texas)</param>
+        /// <param name="stateAbbrev">US State ColumnName (ie Texas)</param>
         /// <returns></returns>
         public static string USStateAbbrevToName(string stateAbbrev)
         {

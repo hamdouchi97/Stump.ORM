@@ -10,9 +10,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Linq.Structure;
 
-namespace SubSonic.Linq.Translation
+namespace Stump.ORM.SubSonic.Linq.Translation
 {
     /// <summary>
     /// Converts LINQ query operators to into custom DbExpression's

@@ -11,9 +11,9 @@ using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using SubSonic.Linq.Translation;
+using Stump.ORM.SubSonic.Linq.Translation;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// Builds an execution plan for a query expression

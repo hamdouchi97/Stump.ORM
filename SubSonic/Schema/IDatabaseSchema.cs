@@ -11,9 +11,10 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.Collections.Generic;
 
-namespace SubSonic.Schema
+namespace Stump.ORM.SubSonic.Schema
 {
     public interface IDatabaseSchema
     {

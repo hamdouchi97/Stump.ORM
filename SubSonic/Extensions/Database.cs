@@ -11,17 +11,18 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
-using SubSonic.DataProviders;
-using SubSonic.Query;
-using SubSonic.Schema;
-using Constraint=SubSonic.Query.Constraint;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
+using Constraint = Stump.ORM.SubSonic.Query.Constraint;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     public static class Database
     {

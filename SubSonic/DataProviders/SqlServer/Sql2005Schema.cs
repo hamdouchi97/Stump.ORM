@@ -11,14 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.Data;
 using System.Text;
-using SubSonic.Schema;
 using System;
-using SubSonic.SqlGeneration.Schema;
+using Stump.ORM.SubSonic.SQLGeneration.Schema;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders.SqlServer
+namespace Stump.ORM.SubSonic.DataProviders.SqlServer
 {
     
     public class Sql2005Schema : ANSISchemaGenerator

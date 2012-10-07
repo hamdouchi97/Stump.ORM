@@ -11,12 +11,12 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.Collections.Generic;
-using SubSonic.Query;
-using SubSonic.Schema;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     /// <summary>
     /// 
@@ -84,7 +84,7 @@ namespace SubSonic.DataProviders
         /// <summary>
         /// Finds the column.
         /// </summary>
-        /// <param name="columnName">Name of the column.</param>
+        /// <param name="columnName">ColumnName of the column.</param>
         /// <returns></returns>
         IColumn FindColumn(string columnName);
 

@@ -11,20 +11,19 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.IO;
 using System.Reflection;
-using SubSonic.DataProviders.Log;
-using SubSonic.Query;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration.Schema;
+using Stump.ORM.SubSonic.DataProviders.Log;
+using Stump.ORM.SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Query;
+using Stump.ORM.SubSonic.Schema;
 
-using SubSonic.Linq.Structure;
-
-namespace SubSonic.DataProviders
+namespace Stump.ORM.SubSonic.DataProviders
 {
     public interface IDataProvider
     {

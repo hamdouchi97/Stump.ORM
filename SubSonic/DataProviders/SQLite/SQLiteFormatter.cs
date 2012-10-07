@@ -3,12 +3,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using SubSonic.Extensions;
-using SubSonic.Linq.Structure;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.Linq.Structure;
 
 #endregion
 
-namespace SubSonic.DataProviders.SQLite
+namespace Stump.ORM.SubSonic.DataProviders.SQLite
 {
     /// <summary>
     /// Formats a query expression into TSQL language syntax

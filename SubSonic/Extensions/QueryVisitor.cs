@@ -11,16 +11,16 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using SubSonic.Linq.Structure;
-using SubSonic.Query;
 using System.Collections;
-using ExpressionVisitor = SubSonic.Linq.Structure.ExpressionVisitor;
+using Stump.ORM.SubSonic.Query;
+using ExpressionVisitor = Stump.ORM.SubSonic.Linq.Structure.ExpressionVisitor;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     public class QueryVisitor : ExpressionVisitor
     {

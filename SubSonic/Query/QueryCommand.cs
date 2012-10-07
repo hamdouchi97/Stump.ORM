@@ -11,14 +11,15 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
-using SubSonic.Extensions;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.Extensions;
 
-namespace SubSonic.Query
+namespace Stump.ORM.SubSonic.Query
 {
     /// <summary>
     /// This set of classes abstracts out commands and their parameters so that
@@ -114,7 +115,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the specified parameter name.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="value">The value.</param>
         public void Add(string parameterName, object value)
         {
@@ -124,7 +125,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the specified parameter name.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="value">The value.</param>
         /// <param name="dataType">Type of the data.</param>
         public void Add(string parameterName, object value, DbType dataType)
@@ -135,7 +136,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the specified parameter name.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="value">The value.</param>
         /// <param name="dataType">Type of the data.</param>
         /// <param name="mode">The mode.</param>
@@ -250,7 +251,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the parameter. The public AddParameter methods should call this one.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="parameterValue">The parameter value.</param>
         /// <param name="maxSize">Size of the max.</param>
         /// <param name="dbType">Type of the db.</param>
@@ -277,7 +278,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="parameterValue">The parameter value.</param>
         /// <param name="dataType">Type of the data.</param>
         /// <param name="parameterDirection">The parameter direction.</param>
@@ -289,7 +290,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="parameterValue">The parameter value.</param>
         /// <param name="dataType">Type of the data.</param>
         public void AddParameter(string parameterName, object parameterValue, DbType dataType)
@@ -300,7 +301,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="parameterValue">The parameter value.</param>
         public void AddParameter(string parameterName, object parameterValue)
         {
@@ -310,7 +311,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the output parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="maxSize">Size of the max.</param>
         /// <param name="dbType">Type of the db.</param>
         public void AddOutputParameter(string parameterName, int maxSize, DbType dbType)
@@ -321,7 +322,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the output parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="maxSize">Size of the max.</param>
         public void AddOutputParameter(string parameterName, int maxSize)
         {
@@ -331,7 +332,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the output parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         public void AddOutputParameter(string parameterName)
         {
             AddOutputParameter(parameterName, -1, DbType.AnsiString);
@@ -340,7 +341,7 @@ namespace SubSonic.Query
         /// <summary>
         /// Adds the output parameter.
         /// </summary>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="parameterName">ColumnName of the parameter.</param>
         /// <param name="dbType">Type of the db.</param>
         public void AddOutputParameter(string parameterName, DbType dbType)
         {

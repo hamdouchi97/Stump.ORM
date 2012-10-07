@@ -8,11 +8,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
-using SubSonic.DataProviders;
+using Stump.ORM.SubSonic.DataProviders;
 
-namespace SubSonic.Linq.Structure
+namespace Stump.ORM.SubSonic.Linq.Structure
 {
     /// <summary>
     /// Optional interface for IQueryProvider to implement Query&lt;T&gt;'s QueryText property.

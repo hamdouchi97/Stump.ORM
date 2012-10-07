@@ -11,14 +11,14 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System.Data;
 using System.Text;
-using SubSonic.Extensions;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration.Schema;
+using Stump.ORM.SubSonic.Extensions;
+using Stump.ORM.SubSonic.SQLGeneration.Schema;
+using Stump.ORM.SubSonic.Schema;
 
-
-namespace SubSonic.DataProviders.MySQL
+namespace Stump.ORM.SubSonic.DataProviders.MySQL
 {
     
     public class MySqlSchema : ANSISchemaGenerator

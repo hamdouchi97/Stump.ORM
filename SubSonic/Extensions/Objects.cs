@@ -11,17 +11,18 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 // 
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 using System.Linq;
-using SubSonic.DataProviders;
-using SubSonic.Schema;
-using SubSonic.SqlGeneration.Schema;
 using System.ComponentModel;
+using Stump.ORM.SubSonic.DataProviders;
+using Stump.ORM.SubSonic.SQLGeneration.Schema;
+using Stump.ORM.SubSonic.Schema;
 
-namespace SubSonic.Extensions
+namespace Stump.ORM.SubSonic.Extensions
 {
     public static class Objects
     {
@@ -273,7 +274,7 @@ namespace SubSonic.Extensions
                     else if(pk.IsString && pk.MaxLength == 0)
                         pk.MaxLength = 255;
                     //} else {
-                    //    pk = new DatabaseColumn(type.Name + "ID", result);
+                    //    pk = new DatabaseColumn(type.ColumnName + "ID", result);
                     //    pk.DataType = DbType.Int32;
                     //    pk.IsPrimaryKey = true;
                     //    pk.AutoIncrement = true;
@@ -302,7 +303,7 @@ namespace SubSonic.Extensions
         {
             foreach (var att in attributes)
             {
-                if (att.ToString().Equals("SubSonic.SqlGeneration.Schema.SubSonicIgnoreAttribute"))
+                if (att.ToString().Equals("SubSonic.SqlGeneration.Schema.IgnoreAttribute"))
                 {
                     return true;
                 }

@@ -11,9 +11,10 @@
 //   implied. See the License for the specific language governing
 //   rights and limitations under the License.
 //  
+
 using System;
 
-namespace SubSonic.Repository
+namespace Stump.ORM.SubSonic.Repository
 {
 	[Flags]
 	public enum SimpleRepositoryOptions
