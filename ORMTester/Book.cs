@@ -6,6 +6,12 @@ using Stump.ORM.SubSonic.SQLGeneration.Schema;
 
 namespace ORMTester
 {
+    public enum BookType
+    {
+        Romance,
+        Polar,
+    }
+
     public class BookRelator
     {
         public static string FetchQuery = "SELECT * FROM books LEFT JOIN authors ON books.AuthorId = authors.Id";
@@ -45,6 +51,12 @@ namespace ORMTester
         }
 
         public string Name
+        {
+            get;
+            set;
+        }
+
+        public BookType Type
         {
             get;
             set;

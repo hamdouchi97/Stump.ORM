@@ -134,6 +134,9 @@ namespace Stump.ORM.SubSonic.DataProviders.MySQL
             {
                 sb.Append(" " + GetNativeType(column.DataType));
 
+                if (column.IsUnsigned)
+                    sb.Append(" UNSIGNED ");
+
                 if (column.MaxLength > 0)
                     sb.Append("(" + column.MaxLength + ")");
 

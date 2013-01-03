@@ -155,9 +155,16 @@ namespace Stump.ORM.SubSonic.Extensions
         	       type == typeof (Int32) ||
         	       type == typeof (Int32?) ||
         	       type == typeof (Int64) ||
-        	       type == typeof (Int64?) ||
+                   type == typeof(UInt64?) ||
+                   type == typeof(UInt16) ||
+                   type == typeof(UInt16?) ||
+                   type == typeof(UInt32) ||
+                   type == typeof(UInt32?) ||
+                   type == typeof(UInt64) ||
+                   type == typeof(UInt64?) ||
         	       type == typeof (float?) ||
-        	       type == typeof (float) ||
+                   type == typeof(float) ||
+                   type == typeof(byte) ||
                    type == typeof(byte[]) ||
         	       type.IsEnum || IsNullableEnum(type);
         }
@@ -186,9 +193,12 @@ namespace Stump.ORM.SubSonic.Extensions
                 }
             }
 
-            var props = type.GetProperties();
+            var props = type.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.FlattenHierarchy);
             foreach(var prop in props)
             {
+                if (prop.GetSetMethod() == null)
+                    continue;
+
                 var attributes = prop.GetCustomAttributes(false);
                 if (ColumnIsIgnored(attributes))
                 {
@@ -301,15 +311,7 @@ namespace Stump.ORM.SubSonic.Extensions
 
         private static bool ColumnIsIgnored(object[] attributes)
         {
-            foreach (var att in attributes)
-            {
-                if (att.ToString().Equals("SubSonic.SqlGeneration.Schema.IgnoreAttribute"))
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            return attributes.Any(x => x is IgnoreAttribute);
         }
 
 		private static DbType IdentifyColumnDataType(Type type, bool isNullable)

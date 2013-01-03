@@ -88,7 +88,10 @@ namespace Stump.ORM
         public void OpenConnection()
         {
             DataProvider = ProviderFactory.GetProvider(Configuration.GetConnectionString(), Configuration.ProviderName);
-            Database = new Database(Configuration.GetConnectionString(), Configuration.ProviderName);
+            Database = new Database(Configuration.GetConnectionString(), Configuration.ProviderName)
+                {
+                    KeepConnectionAlive = true,
+                };
 
             Database.OpenSharedConnection();
 
@@ -101,7 +104,7 @@ namespace Stump.ORM
                 if (map.Type.GetInterface(typeof (IManualGeneratedRecord).FullName) != null)
                 {
                     var instance = Activator.CreateInstance(map.Type, true);
-                    table = ((IManualGeneratedRecord)instance).GetTableInformation();
+                    table = ((IManualGeneratedRecord)instance).GetTableInformation(DataProvider);
                 }
                 else
                 {
@@ -118,7 +121,7 @@ namespace Stump.ORM
 
         public void CloseConnection()
         {
-            Database.CloseSharedConnection();
+           Database.CloseSharedConnection();
         }
     }
 }

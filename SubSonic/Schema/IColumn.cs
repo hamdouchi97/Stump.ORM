@@ -27,7 +27,15 @@ namespace Stump.ORM.SubSonic.Schema
         /// <value>
         /// 	<c>true</c> if this instance is numeric; otherwise, <c>false</c>.
         /// </value>
-        bool IsNumeric { get; }
+        bool IsNumeric
+        {
+            get;
+        }
+
+        bool IsUnsigned
+        {
+            get;
+        }
 
         /// <summary>
         /// Gets a value indicating whether this instance is date time.

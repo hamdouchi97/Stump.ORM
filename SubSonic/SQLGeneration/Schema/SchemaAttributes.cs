@@ -101,9 +101,6 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class IgnoreAttribute : Attribute { }
-
-    [AttributeUsage(AttributeTargets.Property)]
     public class PrimaryKeyAttribute : Attribute, IPropertyMappingAttribute
     {
         public bool AutoIncrement { get; set; }

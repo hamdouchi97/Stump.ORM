@@ -17,6 +17,7 @@ namespace ORMTester
             if (m_current != null && m_current.Id == author.Id)
             {
                 m_current.Books.Add(book);
+                book.Author = m_current;
                 return null;
             }
 
@@ -24,6 +25,7 @@ namespace ORMTester
 
             m_current = author;
             m_current.Books.Add(book);
+            book.Author = m_current;
 
             return previous;
         }

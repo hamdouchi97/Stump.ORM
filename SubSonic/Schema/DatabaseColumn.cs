@@ -117,6 +117,16 @@ namespace Stump.ORM.SubSonic.Schema
             }
         }
 
+        public bool IsUnsigned
+        {
+            get
+            {
+                return DataType == DbType.UInt16 ||
+                       DataType == DbType.UInt32 ||
+                       DataType == DbType.UInt64;
+            }
+        }
+
         /// <summary>
         /// Gets a value indicating whether this instance is date time.
         /// </summary>

@@ -1201,6 +1201,10 @@ namespace Stump.ORM
 						var names = new List<string>();
 						var values = new List<string>();
 						var index = 0;
+
+                        if (poco is ISaveIntercepter)
+                            ( (ISaveIntercepter)poco ).BeforeSave(false);
+
 						foreach (var i in pd.Columns)
 						{
 							// Don't insert result columns
@@ -1365,6 +1369,10 @@ namespace Stump.ORM
 						var sb = new StringBuilder();
 						var index = 0;
 						var pd = PocoData.ForObject(poco,primaryKeyName);
+
+                        if (poco is ISaveIntercepter)
+                            ( (ISaveIntercepter)poco ).BeforeSave(false);
+
 						if (columns == null)
 						{
 							foreach (var i in pd.Columns)
@@ -1777,15 +1785,18 @@ namespace Stump.ORM
 					Database.Mapper.GetTableInfo(t, TableInfo);
 
 				// Work out bound properties
-				bool ExplicitColumns = t.GetCustomAttributes(typeof(ExplicitColumnsAttribute), true).Length > 0;
+				bool explicitColumns = t.GetCustomAttributes(typeof(ExplicitColumnsAttribute), true).Length > 0;
 				Columns = new Dictionary<string, PocoColumn>(StringComparer.OrdinalIgnoreCase);
-				foreach (var pi in t.GetProperties())
-				{
+                foreach (var pi in t.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.FlattenHierarchy))
+                {
+                    if (pi.GetSetMethod() == null)
+                        continue;
+
 					// Work out if properties is to be included
-					var ColAttrs = pi.GetCustomAttributes(typeof(ColumnAttribute), true);
-					if (ExplicitColumns)
+					var colAttrs = pi.GetCustomAttributes(typeof(ColumnAttribute), true);
+					if (explicitColumns)
 					{
-						if (ColAttrs.Length == 0)
+						if (colAttrs.Length == 0)
 							continue;
 					}
 					else
@@ -1806,9 +1817,9 @@ namespace Stump.ORM
                     }
 
 				    // Work out the DB column name
-					if (ColAttrs.Length > 0)
+					if (colAttrs.Length > 0)
 					{
-						var colattr = (ColumnAttribute)ColAttrs[0];
+						var colattr = (ColumnAttribute)colAttrs[0];
 						pc.ColumnName = colattr.ColumnName;
 						if ((colattr as ResultColumnAttribute) != null)
 							pc.ResultColumn = true;
