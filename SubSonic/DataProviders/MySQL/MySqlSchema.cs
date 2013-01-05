@@ -50,12 +50,13 @@ namespace Stump.ORM.SubSonic.DataProviders.MySQL
                 case DbType.AnsiStringFixedLength:
                 case DbType.String:
                 case DbType.StringFixedLength:
-                    return "nvarchar";
+                    return "mediumtext";
                 case DbType.Boolean:
                     return "tinyint";
                 case DbType.SByte:
-                case DbType.Binary:
                 case DbType.Byte:
+                    return "tinyint";
+                case DbType.Binary:
                     return "longblob";
                 case DbType.Currency:
                     return "money";
@@ -70,12 +71,14 @@ namespace Stump.ORM.SubSonic.DataProviders.MySQL
                 case DbType.Guid:
                     return "binary";
                 case DbType.UInt32:
+                case DbType.Int32:
+                    return "int";
                 case DbType.UInt16:
                 case DbType.Int16:
-                case DbType.Int32:
+                    return "smallint";
                 case DbType.UInt64:
                 case DbType.Int64:
-                    return "int";
+                    return "bigint";
                 case DbType.Single:
                     return "real";
                 case DbType.VarNumeric:
@@ -128,21 +131,17 @@ namespace Stump.ORM.SubSonic.DataProviders.MySQL
             if (column.DataType == DbType.Guid)
                 column.MaxLength = 16;
 
-            if (column.DataType == DbType.String && column.MaxLength > 8000)
-                sb.Append(" LONGTEXT ");
-            else
-            {
-                sb.Append(" " + GetNativeType(column.DataType));
+            sb.Append(" " + GetNativeType(column.DataType));
 
-                if (column.IsUnsigned)
-                    sb.Append(" UNSIGNED ");
+            if (column.IsUnsigned)
+                sb.Append(" UNSIGNED ");
 
-                if (column.MaxLength > 0)
-                    sb.Append("(" + column.MaxLength + ")");
+            if (column.MaxLength > 0)
+                sb.Append("(" + column.MaxLength + ")");
 
-                if (column.DataType == DbType.Double || column.DataType == DbType.Decimal)
-                    sb.Append("(" + column.NumericPrecision + ", " + column.NumberScale + ")");
-            }
+            if (column.DataType == DbType.Double || column.DataType == DbType.Decimal)
+                sb.Append("(" + column.NumericPrecision + ", " + column.NumberScale + ")");
+
             if (column.IsPrimaryKey)
                 sb.Append(" PRIMARY KEY ");
 

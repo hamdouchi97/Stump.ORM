@@ -94,10 +94,20 @@ namespace Stump.ORM.SubSonic.Extensions
 
             if(type == typeof(Int32))
                 result = DbType.Int32;
+            else if (type == typeof(Byte))
+                result = DbType.Byte;
+            else if (type == typeof(SByte))
+                result = DbType.SByte;
             else if (type == typeof(Int16))
                 result = DbType.Int16;
             else if (type == typeof(Int64))
-                result = DbType.Int64;
+                result = DbType.Int64; 
+            else if (type == typeof(UInt32))
+                result = DbType.UInt32;
+            else if (type == typeof(UInt16))
+                result = DbType.UInt16;
+            else if (type == typeof(UInt64))
+                result = DbType.UInt64;
             else if(type == typeof(DateTime))
                 result = DbType.DateTime;
             else if(type == typeof(float))

@@ -154,7 +154,8 @@ namespace Stump.ORM.SubSonic.Extensions
         	       type == typeof (Int16?) ||
         	       type == typeof (Int32) ||
         	       type == typeof (Int32?) ||
-        	       type == typeof (Int64) ||
+                   type == typeof(Int64) ||
+                   type == typeof(Int64?) ||
                    type == typeof(UInt64?) ||
                    type == typeof(UInt16) ||
                    type == typeof(UInt16?) ||
@@ -219,10 +220,10 @@ namespace Stump.ORM.SubSonic.Extensions
                         column.NumberScale = 2;
                         column.NumericPrecision = 10;
                     }
-                    else if(column.DataType == DbType.String)
+                    /*else if(column.DataType == DbType.String)
                     {
                         column.MaxLength = 255;
-                    }
+                    }*/
                     else if (column.DataType == DbType.Binary)
                     {
                         isNullable = true;

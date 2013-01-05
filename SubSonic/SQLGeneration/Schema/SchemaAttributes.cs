@@ -73,7 +73,7 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
 	}
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicNullStringAttribute : Attribute, IPropertyMappingAttribute 
+    public class NullStringAttribute : Attribute, IPropertyMappingAttribute 
     {
         public bool Accept(IColumn column)
         {
@@ -87,7 +87,7 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicLongStringAttribute : Attribute, IPropertyMappingAttribute
+    public class LongStringAttribute : Attribute, IPropertyMappingAttribute
     {
         public bool Accept(IColumn column)
         {
@@ -140,11 +140,11 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicStringLengthAttribute : Attribute, IPropertyMappingAttribute
+    public class StringLengthAttribute : Attribute, IPropertyMappingAttribute
     {
         public int Length { get; set; }
         
-        public SubSonicStringLengthAttribute(int length)
+        public StringLengthAttribute(int length)
         {
             Length = length;
         }
@@ -161,12 +161,12 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicNumericPrecisionAttribute : Attribute, IPropertyMappingAttribute
+    public class NumericPrecisionAttribute : Attribute, IPropertyMappingAttribute
     {
         public int Precision { get; set; }
         public int Scale { get; set; }
 
-        public SubSonicNumericPrecisionAttribute(int precision, int scale)
+        public NumericPrecisionAttribute(int precision, int scale)
         {
             Scale = scale;
             Precision = precision;
@@ -185,11 +185,11 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
     }
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class SubSonicDefaultSettingAttribute : Attribute, IPropertyMappingAttribute
+    public class DefaultSettingAttribute : Attribute, IPropertyMappingAttribute
     {
         public object DefaultSetting { get; set; }
 
-        public SubSonicDefaultSettingAttribute(object defaultSetting)
+        public DefaultSettingAttribute(object defaultSetting)
         {
             DefaultSetting = defaultSetting;
         }

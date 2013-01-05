@@ -173,6 +173,7 @@ namespace Stump.ORM.SubSonic.Schema
             get { return Provider.SchemaGenerator.BuildDropColumnStatement(Table.Name, Name); }
         }
 
+
         #endregion
 
 
