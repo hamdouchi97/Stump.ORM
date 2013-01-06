@@ -1778,7 +1778,7 @@ namespace Stump.ORM
 				// Get the primary key
 				TableInfo.PrimaryKey = "ID";
 				TableInfo.SequenceName = null;
-				TableInfo.AutoIncrement = false ;
+				TableInfo.AutoIncrement = true;
 
 				// Call column mapper
 				if (Database.Mapper != null)
