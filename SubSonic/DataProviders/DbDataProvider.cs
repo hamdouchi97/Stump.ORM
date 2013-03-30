@@ -56,7 +56,6 @@ namespace Stump.ORM.SubSonic.DataProviders
             // TODO: Schema is specific to SQL Server?
             Schema = new DatabaseSchema();
 
-			InterceptionStrategy = new DynamicProxyInterceptionStrategy(this);
         }
 
         public string ConnectionString { get; private set; }

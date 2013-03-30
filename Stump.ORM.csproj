@@ -63,9 +63,6 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>Libraries\Castle.Core.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=6.6.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -94,7 +91,6 @@
     <Compile Include="SubSonic\DataProviders\ISchemaGenerator.cs" />
     <Compile Include="SubSonic\DataProviders\ISqlFragment.cs" />
     <Compile Include="SubSonic\DataProviders\ISqlGenerator.cs" />
-    <Compile Include="SubSonic\DataProviders\LazyLoadInterceptor.cs" />
     <Compile Include="SubSonic\DataProviders\Log\DelegatingLogAdapter.cs" />
     <Compile Include="SubSonic\DataProviders\Log\ILogAdapter.cs" />
     <Compile Include="SubSonic\DataProviders\Log\TextWriterLogAdapter.cs" />

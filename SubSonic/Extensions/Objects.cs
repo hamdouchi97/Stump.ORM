@@ -166,6 +166,7 @@ namespace Stump.ORM.SubSonic.Extensions
         	       type == typeof (float?) ||
                    type == typeof(float) ||
                    type == typeof(byte) ||
+                   type == typeof(sbyte) ||
                    type == typeof(byte[]) ||
         	       type.IsEnum || IsNullableEnum(type);
         }

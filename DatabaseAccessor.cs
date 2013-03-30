@@ -85,13 +85,10 @@ namespace Stump.ORM
             }
         }
 
-        public void OpenConnection()
+        public void OpenConnection(Database database)
         {
             DataProvider = ProviderFactory.GetProvider(Configuration.GetConnectionString(), Configuration.ProviderName);
-            Database = new Database(Configuration.GetConnectionString(), Configuration.ProviderName)
-                {
-                    KeepConnectionAlive = true,
-                };
+            Database = database;
 
             Database.OpenSharedConnection();
 
@@ -101,10 +98,10 @@ namespace Stump.ORM
                     continue;
 
                 ITable table;
-                if (map.Type.GetInterface(typeof (IManualGeneratedRecord).FullName) != null)
+                if (map.Type.GetInterface(typeof(IManualGeneratedRecord).FullName) != null)
                 {
                     var instance = Activator.CreateInstance(map.Type, true);
-                    table = ((IManualGeneratedRecord)instance).GetTableInformation(DataProvider);
+                    table = ( (IManualGeneratedRecord)instance ).GetTableInformation(DataProvider);
                 }
                 else
                 {
@@ -117,6 +114,15 @@ namespace Stump.ORM
 
                 Database.Execute(query);
             }
+        }
+
+        public void OpenConnection()
+        {
+            var db = new Database(Configuration.GetConnectionString(), Configuration.ProviderName)
+                {
+                    KeepConnectionAlive = true,
+                };
+            OpenConnection(db);
         }
 
         public void CloseConnection()
