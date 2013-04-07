@@ -13,6 +13,7 @@
 // 
 
 using System.Data;
+using System.Linq;
 using System.Text;
 using Stump.ORM.SubSonic.Extensions;
 using Stump.ORM.SubSonic.SQLGeneration.Schema;
@@ -103,6 +104,10 @@ namespace Stump.ORM.SubSonic.DataProviders.MySQL
 
             foreach (IColumn col in table.Columns)
                 createSql.AppendFormat("\r\n  `{0}`{1},", col.Name, GenerateColumnAttributes(col));
+
+            foreach (var index in table.Indexes)
+                createSql.AppendFormat("\r\n  INDEX {0}(`{1}`),", index.Name, string.Join(", ", index.Columns.Select(x => x.Name)));
+
             string columnSql = createSql.ToString();
             return columnSql.Chop(",");
         }
@@ -144,6 +149,9 @@ namespace Stump.ORM.SubSonic.DataProviders.MySQL
 
             if (column.IsPrimaryKey)
                 sb.Append(" PRIMARY KEY ");
+
+            if (column.IsUniqueKey)
+                sb.Append(" UNIQUE KEY ");
 
             if (column.IsPrimaryKey | !column.IsNullable)
                 sb.Append(" NOT NULL ");

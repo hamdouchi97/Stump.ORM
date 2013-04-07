@@ -194,11 +194,13 @@
     <Compile Include="SubSonic\Repository\SubSonicRepository.cs" />
     <Compile Include="SubSonic\Repository\TestRepository.cs" />
     <Compile Include="SubSonic\Schema\DatabaseColumn.cs" />
+    <Compile Include="SubSonic\Schema\DatabaseColumnIndex.cs" />
     <Compile Include="SubSonic\Schema\DatabaseRelation.cs" />
     <Compile Include="SubSonic\Schema\DatabaseSchema.cs" />
     <Compile Include="SubSonic\Schema\DatabaseTable.cs" />
     <Compile Include="SubSonic\Schema\IActiveRecord.cs" />
     <Compile Include="SubSonic\Schema\IColumn.cs" />
+    <Compile Include="SubSonic\Schema\IColumnIndex.cs" />
     <Compile Include="SubSonic\Schema\IDatabaseSchema.cs" />
     <Compile Include="SubSonic\Schema\IDBObject.cs" />
     <Compile Include="SubSonic\Schema\IReference.cs" />
@@ -214,6 +216,7 @@
     <Compile Include="SubSonic\SQLGeneration\Schema\SchemaAttributes.cs" />
     <Compile Include="SubSonic\SQLGeneration\SqlFragment.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

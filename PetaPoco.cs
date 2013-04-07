@@ -2120,6 +2120,11 @@ namespace Stump.ORM
 					}
 					else if (!dstType.IsAssignableFrom(srcType))
 					{
+                        var nullableUnderlyingType = Nullable.GetUnderlyingType(dstType);
+
+                        if (nullableUnderlyingType != null)
+                            dstType = nullableUnderlyingType;
+
 						converter = delegate(object src) { return Convert.ChangeType(src, dstType, null); };
 					}
 				}

@@ -14,6 +14,7 @@
 
 using System;
 using System.Data;
+using System.Linq;
 using Stump.ORM.SubSonic.Schema;
 
 namespace Stump.ORM.SubSonic.SQLGeneration.Schema
@@ -136,6 +137,47 @@ namespace Stump.ORM.SubSonic.SQLGeneration.Schema
                 column.AutoIncrement = AutoIncrement;
             else if (column.IsString && column.MaxLength == 0)
                 column.MaxLength = 255;
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.Property)]
+    public class IndexAttribute : Attribute, IPropertyMappingAttribute
+    {
+        public IndexAttribute()
+        {
+            
+        }
+
+        public IndexAttribute(string name)
+        {
+            Name = name;
+        }
+
+        public string Name
+        {
+            get;
+            private set;
+        }
+
+        public bool Accept(IColumn column)
+        {
+            return true;
+        }
+
+        public void Apply(IColumn column)
+        {
+            var index = column.Table.Indexes.FirstOrDefault(x => x.Name.ToLower() == Name.ToLower());
+            if (index == null || string.IsNullOrEmpty(Name))
+            {
+                index = new DatabaseColumnIndex(column)
+                    {
+                        Name = Name
+                    };
+
+                column.Table.Indexes.Add(index);
+            }
+            else
+                index.Columns.Add(column);
         }
     }
 

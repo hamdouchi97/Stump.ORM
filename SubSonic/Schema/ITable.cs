@@ -12,6 +12,7 @@
 //   rights and limitations under the License.
 // 
 
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Stump.ORM.SubSonic.Schema
@@ -28,6 +29,13 @@ namespace Stump.ORM.SubSonic.Schema
 
         string CreateSql { get; }
         string DropSql { get; }
+
+        IList<IColumnIndex> Indexes
+        {
+            get;
+            set;
+        }
+
         IColumn GetColumn(string columName);
         IRelation GetRelation(string columName);
         IColumn GetColumnByPropertyName(string columName);

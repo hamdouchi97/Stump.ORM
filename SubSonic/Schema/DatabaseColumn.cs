@@ -58,7 +58,16 @@ namespace Stump.ORM.SubSonic.Schema
         public bool AutoIncrement { get; set; }
         public int NumberScale { get; set; }
         public int NumericPrecision { get; set; }
-        public bool IsPrimaryKey { get; set; }
+        public bool IsPrimaryKey
+        {
+            get;
+            set;
+        }
+        public bool IsUniqueKey
+        {
+            get;
+            set;
+        }
         public object DefaultSetting { get; set; }
 
         public string SchemaName

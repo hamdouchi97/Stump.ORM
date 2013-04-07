@@ -45,6 +45,7 @@ namespace Stump.ORM.SubSonic.Schema
             SchemaName = schema;
             ClassName = classname;
             Columns = new List<IColumn>();
+            Indexes = new List<IColumnIndex>();
         }
 
         public IColumn[] PrimaryKeys
@@ -101,7 +102,17 @@ namespace Stump.ORM.SubSonic.Schema
             set { _provider = value; }
         }
 
-        public IList<IColumn> Columns { get; set; }
+        public IList<IColumn> Columns
+        {
+            get;
+            set;
+        }
+
+        public IList<IColumnIndex> Indexes
+        {
+            get;
+            set;
+        }
 
         private IRelation[] _relations;
         
