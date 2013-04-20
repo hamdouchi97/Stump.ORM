@@ -42,6 +42,11 @@ namespace Stump.ORM
         private List<MappingEntry> m_mapping = new List<MappingEntry>();
         private List<Assembly> m_assemblies = new List<Assembly>();
 
+        public DatabaseAccessor()
+        {
+            
+        }
+        
         public DatabaseAccessor(DatabaseConfiguration configuration)
         {
             Configuration = configuration;
